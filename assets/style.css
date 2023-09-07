@@ -4,6 +4,8 @@
     box-sizing: border-box;
     margin: 0;
     color: rgb(78, 78, 78);
+    transition: all ease-in-out .2s;
+    scroll-behavior: smooth;
 }
 
 h2 {
@@ -14,7 +16,7 @@ body {
     font-family: Assistant;
     margin: 0 auto;
     max-width: 1400px;
-    min-width: 900px;
+    min-width: 320px;
 }
 
 /* HEADER START */
@@ -59,9 +61,19 @@ nav li:last-child {
     padding-right: 0;
 }
 
-nav a {
+.desktop nav a {
     text-decoration: none;
     color: inherit;
+    border-bottom: 1.5px #fff solid;
+}
+
+.desktop nav a:hover {
+    border-bottom: 1.5px rgb(201, 201, 201) solid;
+}
+
+.desktop nav a:active {
+    color: #000;
+    border-bottom: 1.5px #fff solid;
 }
 
 /* HEADER END */
@@ -104,16 +116,26 @@ section>img {
     margin: 20px 0;
 }
 
-.banner button {
+button {
+    cursor: pointer;
     color: #fff;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
     background-color: rgb(73, 73, 73);
     border: none;
     width: 90%;
     padding: 14px 0;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: rgb(99, 99, 99);
+}
+
+button:active {
+    background-color: rgb(73, 73, 73);
 }
 
 /* FIRST SECTION END */
@@ -161,12 +183,21 @@ section>img {
 }
 
 .side .item {
+    cursor: pointer;
     display: flex;
     align-items: center;
     margin-top: 0;
-    padding: 16px 0;
+    padding: 16px;
     margin-bottom: 4px;
-    margin-left: 32px;
+    margin-left: 12px;
+}
+
+.side .item:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.side .item:active {
+    background-color: rgb(228, 228, 228);
 }
 
 .side .item img {
@@ -191,11 +222,19 @@ section>img {
     font-size: 18px;
 }
 
-.side .item .info a {
+.item .info a {
     text-decoration: none;
     font-size: 18px;
     color:rgb(68, 178, 230);
     font-weight: 500;
+}
+
+.item .info:hover a {
+    color: rgb(41, 130, 172);
+}
+
+.item .info:active a {
+    color: rgb(36, 82, 104);
 }
 
 /* START SECTION */
@@ -217,8 +256,21 @@ section>img {
 }
 
 .start .container .item {
+    cursor: pointer;
     width: calc(100% / 12 * 4);
     padding: 16px;
+}
+
+.start .container .item:hover {
+    padding-top: 5px;
+}
+
+.start .container .item:active {
+    padding-top: 10px;
+}
+
+.start .container .item:hover .info {
+    box-shadow: 0 5px 5px rgb(201, 201, 201);
 }
 
 .start .container .item .info {
@@ -302,4 +354,209 @@ footer li {
 
 footer a {
     text-decoration: none;
+}
+
+footer a:hover {
+    color: #000;
+}
+
+footer a:active {
+    color: rgb(99, 99, 99);
+}
+
+/* MOBILE DESIGN */
+
+/* HEADER */
+.mobile .menu {
+    height: 64px;
+    min-width: 320px;
+}
+
+.mobile .menu .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.mobile .menu .nav a {
+    width: fit-content;
+    padding-top: 10px;
+}
+
+.mobile .menu .nav a img {
+    height: 40px;
+    object-fit: cover;
+}
+
+.mobile .menu .nav a img:active {
+    filter: contrast(0.2);
+}
+
+/* FIRST SECTION */
+.mobile .grey {
+    padding: 0;
+    display: block;
+}
+
+.mobile .grey img {
+    width: 100%;
+    height: auto;
+}
+
+.mobile .grey .info {
+    padding: 28px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mobile .grey h1 {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.mobile .grey h2 {
+    font-size: 26px;
+    margin-bottom: 24px;
+}
+
+.mobile button {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 8px;
+}
+
+.mobile a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 8px;
+}
+
+/* PRACTICE SECTION */
+.mobile .practice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 24px 16px;
+}
+
+.mobile .practice .item {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.mobile .practice .item:active {
+    box-shadow: 0 1px 5px rgb(201, 201, 201);
+}
+
+.mobile .practice .item img {
+    width: 100%;
+}
+
+.mobile .practice .item .info {
+    padding: 8px 16px 16px;
+}
+
+.mobile .practice .item .info h2 {
+    font-size: 36px;
+    padding-bottom: 6px;
+}
+
+.mobile .practice .item .info p {
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+/* START SECTION */
+.mobile .start {
+    padding: 0;
+    border-top: rgb(238, 238, 238) solid 1px;
+}
+
+.mobile .start h1 {
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    margin: 32px 0;
+}
+
+.mobile .start .container {
+    display: block;
+    padding: 16px;
+    margin-bottom: 32px;
+}
+
+.mobile .start .container ul {
+    display: block;
+}
+
+.mobile .start .container a {
+    font-weight: 500;
+    color: rgb(73, 73, 73);
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.mobile .start .container ul li {
+    cursor: pointer;
+    padding: 24px;
+    background-color: rgb(228, 228, 228);
+    margin-bottom: 8px;
+}
+
+.mobile .start .container ul li:active {
+    background-color: rgb(201, 201, 201);
+}
+
+/* THESIS */
+.mobile .thesis {
+    border-top: rgb(238, 238, 238) solid 1px;
+    display: block;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+.mobile .thesis h1 {
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    margin: 32px 0;
+}
+
+/* FOOTER */
+footer[class="mobile"] {
+    border: none;
+    padding: 24px;
+}
+
+/* MEDIA  */
+@media screen and (min-width: 900px) {
+    .mobile {
+        display: none;
+    }
+
+    body::-webkit-scrollbar {
+        width: 14px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: rgb(201, 201, 201);
+        border-radius: 10px;
+    }
+} 
+
+@media screen and (min-width: 320px) and (max-width: 900px) {
+    .desktop {
+        display: none;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
 }
